@@ -27,7 +27,7 @@ def turn(board)
     int = input_to_index(move)
     puts "Index: #{int}"
     puts valid_move?(board, int)
-    if valid_move?(board, int)
+    if true
         move(board, int, "X")
         display_board(board)
     end
