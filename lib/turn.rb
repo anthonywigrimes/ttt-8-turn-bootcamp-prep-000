@@ -23,19 +23,17 @@ end
 def turn(board)
     puts "Please enter 1-9:"
     move = gets.strip
-    puts "Enterd: #{move}"
+
     int = input_to_index(move)
-    puts "Index: #{int}"
-    puts valid_move?(board, int)
+
     if valid_move?(board, int)
         move(board, int, "X")
         display_board(board)
+    else
+        puts "Please enter 1-9:"
+        move = gets.strip
+        int = input_to_index(move)
     end
-    #else
-    #    puts "Please enter 1-9:"
-    #    move = gets.strip
-    #    int = input_to_index(move)
-    #end
 end
 
 def move(board, index, character = "X")
