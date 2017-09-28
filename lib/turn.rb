@@ -24,7 +24,9 @@ end
 def turn(board)
     puts "Please enter 1-9:"
     move = gets.strip
+    puts "Enterd: #{move}"
     int = input_to_index(move)
+    puts "Index: #{int}"
     puts board.inspect
     puts valid_move?(board, int)
     if valid_move?(board, int)
