@@ -13,7 +13,6 @@ def input_to_index(input)
 end
 
 def valid_move?(board, index)
-    puts board.inspect
     if board[index] == "X" || board[index] == "O" || index.between?(0, 8) || index < 0
         false
     else
@@ -27,7 +26,6 @@ def turn(board)
     puts "Enterd: #{move}"
     int = input_to_index(move)
     puts "Index: #{int}"
-    puts board.inspect
     puts valid_move?(board, int)
     if valid_move?(board, int)
         move(board, int, "X")
